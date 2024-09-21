@@ -63,18 +63,21 @@
     color: #555;
 }
 .cart-promo-inpt{
+    height: 43px;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #eaeaea;
     border-radius: 4px;
+    padding: 0%;
 }
 .cart-promo-inpt input{
     background:transparent;
-    border: none;
+    border: none !important;
     outline: none;
     padding-left: 10px;
+    margin-bottom: 10px;
 }
 .cart-promo-inpt button{
     width: max(10vw,150px);
@@ -83,6 +86,7 @@
     border: none;
     color: white;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 .item-name{
     position: relative;
@@ -91,7 +95,7 @@
 }
 .item-price{
     position: relative;
-    margin-left: 80px;
+    margin-left: 40px;
 }
 @media (max-width:750px){
     .cart-bottom{
@@ -99,5 +103,16 @@
     }
     .cart-promocode{
         justify-content: start;
+    }
+}
+@media (max-width:550px){
+    .cart-items-title{
+        margin: 0 5px;
+    }
+    .item-name{
+        margin-left: -25px;
+    }
+    .tiltle{
+        margin-left: 40px;
     }
 }

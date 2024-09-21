@@ -43,6 +43,7 @@ function Login() {
           label='Email:'
           placeholder='Email'
           type='email'
+          className='inpt'
           autoComplete='email'
           {...register('email', {
             required: true,

@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 
 function Add() {
+    const [id,setId] =useState('')
     const location=useLocation()
     const post =location.state?.post;
     const user =useSelector((state)=>state.authState.userData.$id)
@@ -54,9 +55,16 @@ function Add() {
             }
         }
         else{
-            console.log(data)
-            config.updateDoc(data.itemImage,{
-                data,
+            if(data.itemImage[0] instanceof File){
+                 await config.createFile(data.itemImage[0])
+                .then(file=>{
+                    if (file){
+                        data.imageId=file.$id
+                    }
+                })
+            }
+            config.updateDoc(post.imageId,{
+                ...data,
                 userId:user,
             })
         }
@@ -72,13 +80,10 @@ function Add() {
                     <label htmlFor="image">
                         <img src={assets.upload_area} alt="" />
                     </label>
-                    {!post && <input type="file" id='image'
+                    <input type="file" id='image'
                         hidden
-                        required
-                        {...register('itemImage', {
-                            required: true
-                        })}
-                    />}
+                        {...register('itemImage')}
+                    />
                 </div>
                 <div className='add-product-name flex-col'>
                     <p>Product Name</p>

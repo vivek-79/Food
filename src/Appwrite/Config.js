@@ -75,13 +75,14 @@ class Config{
 
     //update document
 
-    async updateDoc(docId,{item,itemDescription,itemcategory,itemPrice,userId}){
+    async updateDoc(docId,{item,itemDescription,itemcategory,itemPrice,userId,imageId}){
        try {
         await this.databases.updateDocument(
             conf.appwriteDatabaseId,
             conf.appwriteCollectionId,
             docId,
             {
+                imageId,
                 item,
                 itemDescription,
                 itemcategory,
@@ -89,8 +90,9 @@ class Config{
                 userId
             }
         )
+        console.log('done')
        } catch (error) {
-        console.log(error.message)
+        console.log(error.message,'update error')
        }
     }
 
@@ -162,8 +164,10 @@ class Config{
                 conf.appwriteBucketId,
                 fileId
             )
+            return true
         } catch (error) {
-            console.log(error.message)
+            console.log(error.message,'error in delete')
+            return false
         }
     }
 }

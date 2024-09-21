@@ -38,11 +38,11 @@ function Cart() {
     <div className='cart'>
       <div className='cart-items-title'>
         <p>Item</p>
-        <p>Title</p>
+        <p className='tiltle'>Title</p>
         <p className='item-price'>Price</p>
         <p>Quantity</p>
         <p>Total</p>
-        <p>Remove</p>
+        <p className='remove'>Remove</p>
       </div>
       <br />
       <hr />

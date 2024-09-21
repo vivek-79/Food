@@ -2,7 +2,8 @@
     width: max(300px,30vw);
    height: 43vh;
    margin: auto;
-   margin-top: 100px;
+   margin-top: 50px;
+   margin-bottom: 180px;
    padding:15px 0 ;
    border-radius: 4px;
    z-index: 1;

@@ -2,3 +2,8 @@
 .signUp{
     z-index: 1;
 }
+
+.signUpForm{
+    min-height: 400px;
+    margin: auto;
+}

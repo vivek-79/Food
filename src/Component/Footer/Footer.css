@@ -48,3 +48,17 @@
     background-color: gray;
     border: none;
 }
+
+@media (max-width:600px){
+    .footer{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        bottom: 0%;
+    }
+    .footer-right{
+        position: absolute;
+        right: 0%;
+        bottom: 20%;
+    }
+}
