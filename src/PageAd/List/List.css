@@ -1,0 +1,39 @@
+
+.list{
+    padding-left: 20px;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+.item .buttons{
+    padding: 0 5px;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.button1,.button2{
+    color: aliceblue;
+    border: none;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.392);
+    cursor: pointer;
+}
+.button1{
+    background-color: rgb(34, 205, 200);
+}
+.button2{
+    background-color: rgb(253, 73, 73);
+}
+
+.button1:hover{
+    box-shadow: none;
+}
+.button2:hover{
+    box-shadow: none;
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+
+
+.input-over{
+    width: 60%;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.input-over label{
+    color: #666262;
+    font-size: 20px;
+    margin-left: 6px;
+}
+.input-over .inputG{
+    height: 35px;
+    padding: 6px;
+    font-size: 17px;
+    border:1px solid #80808067;
+    outline-color: tomato;
+    border-radius: 4px;
+    color: #808080bc;
+    margin-bottom: 10px;
+}

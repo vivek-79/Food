@@ -1,0 +1,143 @@
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+}
+
+header .logo img{
+    width: 150px;
+}
+
+.headerMenu ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+header .headerRight{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.headerRight .sign button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+.headerRight .sign button:hover{
+    background-color: #fff4f2;
+}
+.headerMenu .active{
+    border-bottom: 2px solid #49557e;
+    padding-bottom: 2px;
+}
+.headerBasket{
+    position: relative;
+    object-fit: contain;
+}
+.headerBasket .dot{
+    min-height: 7px;
+    width: 7px;
+    background-color: tomato;
+    border-radius: 5px;
+    position: absolute;
+    top: -2px;
+    right: -3px;
+}
+@media(max-width:1050px){
+    header .logo img{
+        width: 140px;
+    }
+    .headerMenu ul{
+        gap: 20px;
+        font-size: 17px;
+    }
+    header .headerRight{
+        gap: 30px;
+    }
+    .headerRight img{
+        width: 22px;
+    }
+    .headerRight .sign button{
+        padding: 8px 25px;
+    }
+}
+@media(max-width:900px){
+    header .logo img{
+        width: 120px;
+    }
+    .headerMenu ul{
+        gap: 15px;
+        font-size: 16px;
+    }
+    header .headerRight{
+        gap: 20px;
+    }
+    .headerRight img{
+        width: 20px;
+    }
+    .headerRight .sign button{
+        padding: 7px 20px;
+        font-size: 20px;
+    }
+}
+@media(max-width:750px){
+    .headerMenu ul{
+        display: none;
+    }
+}
+
+.menu-bar{
+    position: absolute;
+    width: 200px;
+    min-height: 200px;
+    top: 50px;
+    right: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.343);
+    z-index: 9;
+    background-color:rgba(212, 212, 212, 0.815);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.menu-bar ul{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-bar ul li{
+    background: transparent;
+    font-size: 20px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 60px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: -4px;
+    width: 100%;
+}
+.menu-bar ul li:hover{
+    background-color: #fff4f2;
+}
+#seller{
+    font-size: 20px;
+    padding: 12px 40px;
+    margin-top: 7px;
+}
